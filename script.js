@@ -64,7 +64,8 @@ function reset() {
 function save() {
   let times = [];
   times.forEach((i) => {
-    let time = (document.getElementById("save").innerHTML =
-      times[i].push(time));
+    let time = (document.getElementById("save").innerHTML = times[i].push());
+    console.log(time);
   });
+  document.getElementById("save").innerHTML = time.innerHTML;
 }
