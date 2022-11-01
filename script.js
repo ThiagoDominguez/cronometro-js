@@ -14,7 +14,7 @@ window.onload = () => {
   btnReset.addEventListener("click", reset);
   btnSave.addEventListener("click", save);
 };
-
+let times = [];
 function write() {
   let ht, mt, st, mlst;
   mls++;
@@ -62,10 +62,7 @@ function reset() {
   btnStart.addEventListener("click", start);
 }
 function save() {
-  let times = [];
-  times.forEach((i) => {
-    let time = (document.getElementById("save").innerHTML = times[i].push());
-    console.log(time);
-  });
-  document.getElementById("save").innerHTML = time.innerHTML;
+  spanTime = `(${time.innerHTML})`;
+  times.push(spanTime);
+  spanSaved = document.getElementById("saved").innerHTML = times;
 }
