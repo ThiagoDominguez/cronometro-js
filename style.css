@@ -89,7 +89,7 @@ li{
   list-style: none;
 }
 
-@media(max-width:368px){
+@media(max-width:500px){
   span {
       font-weight: 300;
       font-size: 50px
