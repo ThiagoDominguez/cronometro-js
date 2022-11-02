@@ -98,7 +98,8 @@ li{
     .c-save {
       margin-top: 5rem;
       width: 250px;
-      border: #353535 1px solid;
+      border: rgba(59, 59, 59, .2) 1px solid;
+      border-radius: 5px;
     }
   
     #saved {
