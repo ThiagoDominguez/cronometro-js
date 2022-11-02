@@ -9,10 +9,12 @@ window.onload = () => {
   btnStop = document.getElementById("btn-stop");
   btnReset = document.getElementById("btn-reset");
   btnSave = document.getElementById("btn-save");
+  btnSaveKey = document.getElementById("btn-saveKey");
   btnStart.addEventListener("click", start);
   btnStop.addEventListener("click", stop);
   btnReset.addEventListener("click", reset);
   btnSave.addEventListener("click", save);
+  btnSaveKey.addEventListener("click", saveKey);
 };
 let times = [];
 function write() {
@@ -62,7 +64,34 @@ function reset() {
   btnStart.addEventListener("click", start);
 }
 function save() {
-  spanTime = `(${time.innerHTML})`;
+  spanTime = `
+  Tiempo:
+  <li>${time.innerHTML}</li>`;
   times.push(spanTime);
   spanSaved = document.getElementById("saved").innerHTML = times;
 }
+
+// function saveKey(e) {
+//   btnSaveKey.textcontent += `${e.code}`;
+
+//   document.onkeyup = saveKey();
+// }
+
+// EventTarget.addEventListener("saveKey", (e) => {
+//   if (e.saveKey === 1) {
+//     spanTime = `(${time.innerHTML})`;
+//     times.push(spanTime);
+//     spanSaved = document.getElementById("saved").innerHTML = times;
+//     return;
+//   }
+// });
+
+// document.getElementById("btnSaveKey").onkeyup = (e) => {
+//   e.key = 1;
+//   if (e.key === 1) {
+//     spanTime = `(${time.innerHTML})`;
+//     times.push(spanTime);
+//     spanSaved = document.getElementById("saved").innerHTML = times;
+//     return;
+//   }
+// };
