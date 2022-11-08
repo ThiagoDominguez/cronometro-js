@@ -14,7 +14,7 @@ window.onload = () => {
   btnStop.addEventListener("click", stop);
   btnReset.addEventListener("click", reset);
   btnSave.addEventListener("click", save);
-  btnSaveKey.addEventListener("click", saveKey);
+  // btnSaveKey.addEventListener("click", saveKey);
 };
 let times = [];
 function write() {
@@ -63,35 +63,42 @@ function reset() {
   mls = 0;
   btnStart.addEventListener("click", start);
 }
-function save() {
+function save(i) {
   spanTime = `
+  Auto:${i}
   Tiempo:
   <li>${time.innerHTML}</li>`;
   times.push(spanTime);
   spanSaved = document.getElementById("saved").innerHTML = times;
 }
+function presionarTecla(e) {
+  const tecla = e.code;
+  // if (tecla === "Digit1") {
+  //   return save(1);
+  // }
+  switch (tecla) {
+    case "Digit1":
+      return save(1);
+      break;
+    case "Digit2":
+      return save(2);
+    case "Digit3":
+      return save(3);
+    case "Digit4":
+      return save(4);
+    case "Digit5":
+      return save(5);
+    case "Digit6":
+      return save(6);
+    case "Digit7":
+      return save(7);
+    case "Digit8":
+      return save(8);
+    case "Digit9":
+      return save(9);
+    case "Digit0":
+      return save(10);
+  }
+}
 
-// function saveKey(e) {
-//   btnSaveKey.textcontent += `${e.code}`;
-
-//   document.onkeyup = saveKey();
-// }
-
-// EventTarget.addEventListener("saveKey", (e) => {
-//   if (e.saveKey === 1) {
-//     spanTime = `(${time.innerHTML})`;
-//     times.push(spanTime);
-//     spanSaved = document.getElementById("saved").innerHTML = times;
-//     return;
-//   }
-// });
-
-// document.getElementById("btnSaveKey").onkeyup = (e) => {
-//   e.key = 1;
-//   if (e.key === 1) {
-//     spanTime = `(${time.innerHTML})`;
-//     times.push(spanTime);
-//     spanSaved = document.getElementById("saved").innerHTML = times;
-//     return;
-//   }
-// };
+window.onkeydown = presionarTecla;
