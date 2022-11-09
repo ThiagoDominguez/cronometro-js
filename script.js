@@ -76,28 +76,27 @@ function presionarTecla(e) {
   // if (tecla === "Digit1") {
   //   return save(1);
   // }
-  switch (tecla) {
-    case "Digit1":
-      return save(1);
-      break;
-    case "Digit2":
-      return save(2);
-    case "Digit3":
-      return save(3);
-    case "Digit4":
-      return save(4);
-    case "Digit5":
-      return save(5);
-    case "Digit6":
-      return save(6);
-    case "Digit7":
-      return save(7);
-    case "Digit8":
-      return save(8);
-    case "Digit9":
-      return save(9);
-    case "Digit0":
-      return save(10);
+
+  if (tecla === "Digit1" || tecla === "Numpad1") {
+    return save(1);
+  } else if (tecla === "Digit2" || tecla === "Numpad2") {
+    return save(2);
+  } else if (tecla === "Digit3" || tecla === "Numpad3") {
+    return save(3);
+  } else if (tecla === "Digit4" || tecla === "Numpad4") {
+    return save(4);
+  } else if (tecla === "Digit5" || tecla === "Numpad5") {
+    return save(5);
+  } else if (tecla === "Digit6" || tecla === "Numpad6") {
+    return save(6);
+  } else if (tecla === "Digit7" || tecla === "Numpad7") {
+    return save(7);
+  } else if (tecla === "Digit8" || tecla === "Numpad8") {
+    return save(8);
+  } else if (tecla === "Digit9" || tecla === "Numpad9") {
+    return save(9);
+  } else if (tecla === "Digit0" || tecla === "Numpad0") {
+    return save(10);
   }
 }
 
