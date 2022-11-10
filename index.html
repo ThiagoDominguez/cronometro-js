@@ -4,22 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>chronometer app</title>
+    <!-- TODO: agregar favicon para la pagina -->
+    <title>Cronometro Js</title>
   </head>
   <body>
     <div class="c-body">
       <div class="c-time">
         <div class="screen">
-          <span id="time">00:00:00.00</span>
+          <span id="time" onkeydown="save()">00:00:00.00</span>
         </div>
         <div class="c-btn">
           <button id="btn-start">&#9658;</button>
           <button id="btn-stop">&#8718;</button>
           <button id="btn-reset">&#8635;</button>
           <button id="btn-save">&#9873;</button>
-          <!-- <button id="btn-saveKey">&#9873;</button> -->
         </div>
+        <!-- TODO: agregar un instructivo rapido del funcionamiento del cronometro -->
         <div class="c-save">
+          <table>
+                <tr>
+                  <th>Autos</th>
+                  <th>Vueltas</th>
+                </tr>
+                <tr>
+                  <th> 1</th>
+                  <td id="vtl1"></td>
+                </tr>
+                <tr>
+                  <th> 2</th>
+                  <td id="vtl2"></td>
+                  
+                </tr>
+                <tr>
+                  <th> 3</th>
+                  <td id="vtl3"></td>
+                  
+                </tr>
+                <tr>
+                  <th> 4</th>
+                  <td id="vtl4"></td>
+                 
+                </tr>
+                <tr>
+                  <th> 5</th>
+                  <td id="vtl5"></td>
+                 
+                </tr>
+                <tr>
+                  <th> 6</th>
+                  <td id="vtl6"></td>
+                 
+                </tr>
+                <tr>
+                  <th> 7</th>
+                  <td id="vtl7"></td>
+                 
+                </tr>
+                <tr>
+                  <th> 8</th>
+                  <td id="vtl8"></td>
+                 
+                </tr>
+                <tr>
+                  <th> 9</th>
+                  <td id="vtl9"></td>
+                 
+                </tr>
+                <tr>
+                  <th> 10</th>
+                  <td id="vtl10"></td>
+                  
+                </tr>
+               
+              </tbody>
+            </tbody>
+          </table>
+          <!-- TODO: cambiar este span por una tabla para obtener los datos de autos y vueltas -->
           <span id="saved"></span>
         </div>
       </div>

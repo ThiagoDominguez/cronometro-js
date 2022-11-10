@@ -25,7 +25,7 @@ span {
 .c-save{
   margin-top: 5rem;
   width: 500px;
-  border: #353535 1px solid;
+  /* border: #353535 1px solid; */
 }
 #saved{
   font-size: 16px;
@@ -87,6 +87,14 @@ button:hover {
 li{
   list-style: none;
 }
+table{
+  width: 100%;
+}
+table,th,tr,td{
+  border: 1px black solid;
+  border-collapse: collapse;
+}
+
 
 @media(max-width:500px){
   span {

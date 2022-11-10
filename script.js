@@ -14,7 +14,6 @@ window.onload = () => {
   btnStop.addEventListener("click", stop);
   btnReset.addEventListener("click", reset);
   btnSave.addEventListener("click", save);
-  // btnSaveKey.addEventListener("click", saveKey);
 };
 let times = [];
 function write() {
@@ -63,41 +62,88 @@ function reset() {
   mls = 0;
   btnStart.addEventListener("click", start);
 }
-function save(i) {
-  spanTime = `
-  Auto:${i}
-  Tiempo:
-  <li>${time.innerHTML}</li>`;
-  times.push(spanTime);
-  spanSaved = document.getElementById("saved").innerHTML = times;
-}
-function presionarTecla(e) {
-  const tecla = e.code;
-  // if (tecla === "Digit1") {
-  //   return save(1);
-  // }
 
+// Funcion funcionando
+// function save(i) {
+//   spanTime = `
+//   Auto:${i}
+//   Tiempo:
+//   <li>${time.innerHTML}</li>`;
+//   times.push(spanTime);
+//   spanSaved = document.getElementById("saved").innerHTML = times;
+// }
+
+let times2 = [];
+let times3 = [];
+let times4 = [];
+let times5 = [];
+let times6 = [];
+let times7 = [];
+let times8 = [];
+let times9 = [];
+let times10 = [];
+function save(e) {
+  spanTime = `[${time.innerHTML}]`;
+  const tecla = e.code;
   if (tecla === "Digit1" || tecla === "Numpad1") {
-    return save(1);
+    times.push(spanTime);
+
+    return (document.getElementById("vtl1").innerHTML = times);
   } else if (tecla === "Digit2" || tecla === "Numpad2") {
-    return save(2);
+    times2.push(spanTime);
+
+    return (document.getElementById("vtl2").innerHTML = times2);
   } else if (tecla === "Digit3" || tecla === "Numpad3") {
-    return save(3);
+    times3.push(spanTime);
+    return (document.getElementById("vtl3").innerHTML = times3);
   } else if (tecla === "Digit4" || tecla === "Numpad4") {
-    return save(4);
+    times4.push(spanTime);
+    return (document.getElementById("vtl4").innerHTML = times4);
   } else if (tecla === "Digit5" || tecla === "Numpad5") {
-    return save(5);
+    times5.push(spanTime);
+    return (document.getElementById("vtl5").innerHTML = times5);
   } else if (tecla === "Digit6" || tecla === "Numpad6") {
-    return save(6);
+    times6.push(spanTime);
+    return (document.getElementById("vtl6").innerHTML = times6);
   } else if (tecla === "Digit7" || tecla === "Numpad7") {
-    return save(7);
+    times7.push(spanTime);
+    return (document.getElementById("vtl7").innerHTML = times7);
   } else if (tecla === "Digit8" || tecla === "Numpad8") {
-    return save(8);
+    times8.push(spanTime);
+    return (document.getElementById("vtl8").innerHTML = times8);
   } else if (tecla === "Digit9" || tecla === "Numpad9") {
-    return save(9);
+    times9.push(spanTime);
+    return (document.getElementById("vtl9").innerHTML = times9);
   } else if (tecla === "Digit0" || tecla === "Numpad0") {
-    return save(10);
+    times10.push(spanTime);
+    return (document.getElementById("vtl10").innerHTML = times10);
   }
 }
 
-window.onkeydown = presionarTecla;
+// Funcion Funcionando
+// function presionarTecla(e) {
+//   const tecla = e.code;
+//   if (tecla === "Digit1" || tecla === "Numpad1") {
+//     return save(1);
+//   } else if (tecla === "Digit2" || tecla === "Numpad2") {
+//     return save(2);
+//   } else if (tecla === "Digit3" || tecla === "Numpad3") {
+//     return save(3);
+//   } else if (tecla === "Digit4" || tecla === "Numpad4") {
+//     return save(4);
+//   } else if (tecla === "Digit5" || tecla === "Numpad5") {
+//     return save(5);
+//   } else if (tecla === "Digit6" || tecla === "Numpad6") {
+//     return save(6);
+//   } else if (tecla === "Digit7" || tecla === "Numpad7") {
+//     return save(7);
+//   } else if (tecla === "Digit8" || tecla === "Numpad8") {
+//     return save(8);
+//   } else if (tecla === "Digit9" || tecla === "Numpad9") {
+//     return save(9);
+//   } else if (tecla === "Digit0" || tecla === "Numpad0") {
+//     return save(10);
+//   }
+// }
+
+window.onkeydown = save;
