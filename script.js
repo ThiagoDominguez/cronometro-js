@@ -82,6 +82,8 @@ let times7 = [];
 let times8 = [];
 let times9 = [];
 let times10 = [];
+
+// TODO:  agregar numero de vueltas
 function save(e) {
   spanTime = `[${time.innerHTML}]`;
   const tecla = e.code;
