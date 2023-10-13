@@ -63,16 +63,6 @@ function reset() {
   btnStart.addEventListener("click", start);
 }
 
-// Funcion funcionando
-// function save(i) {
-//   spanTime = `
-//   Auto:${i}
-//   Tiempo:
-//   <li>${time.innerHTML}</li>`;
-//   times.push(spanTime);
-//   spanSaved = document.getElementById("saved").innerHTML = times;
-// }
-
 let times2 = [];
 let times3 = [];
 let times4 = [];

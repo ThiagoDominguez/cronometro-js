@@ -37,7 +37,7 @@ span {
   background: var(--background);
   background: linear-gradient(135deg, var(--background-linear1) 0%, var(--background-linear2) 70%);
   width: 100%;
-  height: 110vh;
+  height: 150vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -98,18 +98,24 @@ table,th,tr,td{
   border: 1px black solid;
   border-collapse: collapse;
 }
+.header-container{
+  position: relative;
+  top: 0;
 
-footer{
-  background-color: rgba(0,0,0,.5);
-  text-align: center;
+}
+.header{
+  display: flex;
+  justify-content: center;
   height: 50px;
-  line-height: 50px;
+  align-items: center;
   color: white;
+  background-color: rgba(0, 0, 40, .5);
 
 }
 
-footer h1 {
+.header h1 {
   font-size: 20px;
+    line-height: 50px;
 }
 @media(max-width:500px){
   span {
